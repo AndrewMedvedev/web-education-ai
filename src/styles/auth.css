@@ -11,12 +11,15 @@
 
 /* Заголовки: светящийся белый текст */
 .header {
+  display: flex;
   text-align: center;
   text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
   margin-bottom: 30px;
   background: rgba(255, 255, 255, 0); /* более прозрачный */
   backdrop-filter: blur(20px) saturate(200%) brightness(1.1); /* сильнее размытие, больше насыщенности, чуть ярче */
   -webkit-backdrop-filter: blur(40px) saturate(210%) brightness(1);
+
+  /* Более контрастная обводка и тени */
   border: 1px solid rgba(255, 255, 255, 0.217);
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.341),
@@ -28,30 +31,23 @@
 
 .header h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
   font-weight: 300;
   letter-spacing: 1px;
 }
 
-.header p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  font-weight: 300;
-}
-
 /* Карточка формы — основное стекло */
 .form {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0); /* более прозрачный */
+  backdrop-filter: blur(20px) saturate(200%) brightness(1.1); /* сильнее размытие, больше насыщенности, чуть ярче */
+  -webkit-backdrop-filter: blur(40px) saturate(210%) brightness(1);
   border-radius: 40px;
   padding: 50px 40px;
   width: 100%;
   max-width: 440px;
+  border: 1px solid rgba(255, 255, 255, 0.217);
   box-shadow:
-    0 30px 60px rgba(0, 0, 0, 0.5),
-    0 0 0 1px rgba(255, 255, 255, 0.3) inset;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+    0 8px 32px rgba(0, 0, 0, 0.341),
+    inset 0 1px 2px rgba(255, 255, 255, 0.484);
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
@@ -77,27 +73,6 @@
   z-index: 1;
 }
 
-.form:hover::before {
-  opacity: 0.8;
-  animation: liquidSwirl 8s infinite linear;
-}
-
-@keyframes liquidSwirl {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.form:hover {
-  box-shadow:
-    0 40px 70px rgba(0, 0, 0, 0.6),
-    0 0 0 2px rgba(255, 255, 255, 0.5) inset;
-  background: rgba(255, 255, 255, 0.15);
-}
-
 /* Группы полей */
 .login,
 .password {
@@ -110,7 +85,7 @@
 label {
   display: block;
   margin-bottom: 10px;
-  color: white;
+  color: #f8e4cb;
   font-size: 0.9rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -125,7 +100,7 @@ input {
   background: rgba(255, 255, 255, 0.15);
   border: none;
   border-radius: 60px;
-  color: white;
+  color: #0a0703;
   font-size: 1.1rem;
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -142,7 +117,7 @@ input:focus {
 }
 
 input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: #f8e4cb;
   font-weight: 300;
   font-size: 0.95rem;
 }

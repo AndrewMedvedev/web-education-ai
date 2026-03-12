@@ -4,14 +4,7 @@ import "../styles/header.css";
 const Header = () => {
   return (
     <header className="header">
-      <h1>
-        <NavLink
-          to="/"
-          className={({ isActive }) => (isActive ? "active" : "")}
-        >
-          Образовательная платформа ТИУ
-        </NavLink>
-      </h1>
+      <h1>Образовательная платформа ТИУ</h1>
       <nav>
         <ul>
           <li>

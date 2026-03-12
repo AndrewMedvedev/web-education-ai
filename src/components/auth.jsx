@@ -5,7 +5,6 @@ const Auth = () => {
     <div className="container">
       <div className="header">
         <h1>Войдите в учетную запись</h1>
-        <p>Введите логин и пароль</p>
       </div>
       <form className="form">
         <div className="login">

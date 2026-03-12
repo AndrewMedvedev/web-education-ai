@@ -5,7 +5,7 @@ import Auth from "./components/auth";
 const App = () => {
   return (
     <BrowserRouter>
-     
+      <Header></Header>
       <Routes>
         <Route path="/auth" element={<Auth />} />
       </Routes>
