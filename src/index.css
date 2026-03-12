@@ -1,0 +1,8 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #667eea, #314cc5);
+  min-height: 100vh; /* гарантирует, что body займёт минимум всю высоту окна */
+}

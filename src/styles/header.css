@@ -1,0 +1,58 @@
+/* Header.css — усиленный эффект стекла */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 35px;
+
+  /* Усиленная прозрачность и размытие */
+  background: rgba(255, 255, 255, 0); /* более прозрачный */
+  backdrop-filter: blur(20px) saturate(200%) brightness(1.1); /* сильнее размытие, больше насыщенности, чуть ярче */
+  -webkit-backdrop-filter: blur(40px) saturate(210%) brightness(1);
+
+  /* Более контрастная обводка и тени */
+  border: 1px solid rgba(255, 255, 255, 0.217);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.341),
+    inset 0 1px 2px rgba(255, 255, 255, 0.484);
+
+  /* Цвет текста остаётся белым */
+  color: #f8e4cb;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.header nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.header nav ul li a {
+  color: #f8e4cb;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* лёгкая тень для читаемости */
+}
+
+.header nav ul li a:hover {
+  color: #f8e4cb;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* свечение при наведении */
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
