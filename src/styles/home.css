@@ -1,0 +1,109 @@
+header {
+  margin-bottom: 30px;
+  border-radius: 50px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.233),
+    rgba(255, 255, 255, 0)
+  );
+
+  backdrop-filter: blur(40px) saturate(200%) brightness(0.8);
+
+  border: 2px solid rgba(52, 50, 50, 0.334);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.696),
+    inset 0 1px 2px rgba(255, 255, 255, 0.536);
+}
+
+header h1 {
+  text-align: center;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #f8e4cb;
+}
+
+/* Убираем точки списка */
+.container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Карточки модулей */
+.container li {
+  position: relative; /* для позиционирования псевдоэлемента */
+  overflow: hidden; /* чтобы псевдоэлемент не выходил за скруглённые углы */
+  margin: 50px;
+  margin-bottom: 30px; /* отступ между карточками */
+  border-radius: 50px; /* сильное скругление – «таблетка» */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18),
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.05)
+  ); /* лёгкий градиент для объёма */
+  backdrop-filter: blur(40px) saturate(200%) brightness(0.8); /* эффект матового стекла */
+  border: 2px solid rgba(52, 50, 50, 0.334); /* полупрозрачная рамка */
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.696),
+    inset 0 1px 2px rgba(255, 255, 255, 0.536); /* тени для глубины */
+}
+
+/* Блик */
+.container li::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.075),
+    transparent
+  );
+
+  transform: skewX(-15deg);
+  transition: left 0.9s linear;
+}
+
+/* Hover эффект */
+.container li:hover {
+  transform: translateY(-4px) scale(1.01);
+  background-position: 100% 100%;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.8),
+    inset 0 1px 3px rgba(255, 255, 255, 0.6);
+}
+
+.container li:hover::before {
+  left: 140%;
+}
+
+/* Ссылка внутри */
+.container a {
+  display: block;
+  padding: 15px;
+
+  text-align: center;
+  text-decoration: none;
+
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+
+  color: #f8e4cb;
+
+  overflow-wrap: anywhere;
+}

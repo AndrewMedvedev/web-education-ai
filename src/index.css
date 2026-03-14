@@ -3,6 +3,6 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #667eea, #314cc5);
+  background: linear-gradient(to bottom, #5874f5, #152fa3);
   min-height: 100vh; /* гарантирует, что body займёт минимум всю высоту окна */
 }

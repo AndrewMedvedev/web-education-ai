@@ -1,13 +1,13 @@
-import Header from "./components/header";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import Auth from "./components/auth";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/home";
 
 const App = () => {
+  const names = ["Модуль1", "Модуль2", "Модуль3", "Модуль4"];
+
   return (
     <BrowserRouter>
-      <Header></Header>
       <Routes>
-        <Route path="/auth" element={<Auth />} />
+        <Route path="/" element={<Home names={names} />} />
       </Routes>
     </BrowserRouter>
   );
