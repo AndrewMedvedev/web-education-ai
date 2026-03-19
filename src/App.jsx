@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/home";
-
+import Theory from "./components/theory";
+import Modules from "./components/module";
 const App = () => {
   const names = ["Модуль1", "Модуль2", "Модуль3", "Модуль4"];
 
@@ -8,6 +9,8 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home names={names} />} />
+        <Route path="/module/:id/theory" element={<Theory names={names} />} />
+        <Route path="/module/:id" element={<Modules index={123} />} />
       </Routes>
     </BrowserRouter>
   );
